@@ -38,7 +38,13 @@ app.get('/gallery', (req,res)=> {
         })
 })
 
-
+app.get("/pokemon/:pokemonId", (req, res)=> {
+    api.getPokemonDetails(req.params.pokemonId)
+        .then(pokemon => res.render('details', {
+            pokemon: pokemon,
+            title: pokemon.name
+        }))
+})
 /* Tell the app to "listen" or run on the specified port
 --------------------------------------------------------------- */
 app.listen(3000, function () {

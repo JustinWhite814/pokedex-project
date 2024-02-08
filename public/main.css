@@ -63,3 +63,7 @@ figcaption {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.card-details{
+    text-align: center;
+}

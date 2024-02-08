@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <div class="card-details">
+    <h1><%= pokemon.name %></h1>
+    <p>Appeared in <%=pokemon.game_indices.length %> games</p>
+    <ul>
+        <% for(let ability of pokemon.abilities){ %>
+            <li><%= ability.ability.name %></li>
+            <% } %>
+    </ul>
+    <p>Base HP: <%= pokemon.stats[0].base_stat %></p>
+    <p>Base Attack: <%= pokemon.stats[1].base_stat %></p>
+    <p>Height: <%= pokemon.height %></p>
+    <p>Weight: <%= pokemon.weight %></p>
+</div>
+</body>
+</html>
