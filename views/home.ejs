@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <main class="gallery">
+        <% for(let pokemonCard of pokemonCards){ %>
+        <a href="<%= `/pokemon/${pokemonCard.id}` %>" >
+            <div class="pokemon-card">
+                <figure>
+                    <img src="<%= pokemonCard.picture %>"/>
+                    <figcaption>
+                        <h3><%= pokemonCard.name %></h3>
+                        <p><%= pokemonCard.type %></p>
+                    </figcaption>
+                </figure>
+            </div>
+        
+        <% } %>
+    </main>
+</body>
+</html>

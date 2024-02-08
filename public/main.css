@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    background-color: grey;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0 0 5px 5px;
+}
+
+nav h2 {
+    font-weight: normal;
+    transition: text-shadow 0.5s ease;
+    display: inline;
+}
+
+nav h2:hover {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.gallery {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.pokemon-card {
+    border: 2px solid black;
+    width: 25vw;
+    max-width: 300px;
+    position: relative;
+    margin: 1rem 0;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    min-width: 150px;
+}
+
+.pokemon-card img {
+    width: 100%;
+    min-width: 150px;
+    border-radius: 8px 8px 0 0;
+}
+
+figcaption {
+    padding: 1rem;
+}
+
+.pokemon-card h3 {
+    font-size: 15px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
